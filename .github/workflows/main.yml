@@ -7,8 +7,6 @@ name: React app deployed to surge
 on:
   push:
     branches: [ master ]
-    paths:
-    - 'client/**'
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -33,7 +31,7 @@ jobs:
         cmd: install
         
     - name: Build React App
-      run: sudo yarn build
+      run: yarn build
       
        
         
