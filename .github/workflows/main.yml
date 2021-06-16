@@ -20,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2/client
+    - uses: actions/checkout@v2
     
     - name: Install NodeJS
       uses: actions/setup-node@v2-beta
@@ -31,6 +31,9 @@ jobs:
       with:
         cmd: install
         
+    - name: Moving in Client
+      run: cd client
+      
     - name: Build React App
       run: yarn build
       
