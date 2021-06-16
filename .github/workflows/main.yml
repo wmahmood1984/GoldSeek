@@ -7,8 +7,7 @@ name: React app deployed to surge
 on:
   push:
     branches: [ master ]
-    paths:
-    - './client/'
+  
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -21,7 +20,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v2/client
     
     - name: Install NodeJS
       uses: actions/setup-node@v2-beta
